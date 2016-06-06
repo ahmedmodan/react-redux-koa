@@ -1,0 +1,11 @@
+node_modules
+.env
+dist
+typings
+typings.json
+.vscode
+npm-debug-log
+log
+logfile
+npm-debug.log
+.idea
