@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "engines": {
-    "node": "5.11.0"
+    "node": "6.2.1"
   },
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/karma start karma.config.js",

@@ -1,38 +1,84 @@
-# Modanterist
-A very basic Pinterest Clone in React + Redux.
+# A React - Redux - Koa Boilerplate
 
-This is a personal project and serves as a testing ground for any and all technologies I want to try out.
+This is a production ready boilerplate for projects in React and Redux.
+The backend is in Koa but can easily be swtiched out to Express if desired.
 
-In order to get started make sure you have Node > 5 installed. Node 6 is breaking some dependencies so make sure the node version is below node 6.
-You will also need to have PostgreSQL installed on your local machine.
+The list of Technologies in use are listed below:
+  * React - views
+  * Redux - State management
+  * ImmutableJS - immutability management
+  * koa - Node framework
+  * Materialize - CSS Framework
+  * SASS - CSS pre-processor
+  * Webpack - module bundler
+  * Babel - transpiling ES7+ code
+  * ESlint - linting
+  * Mocha - testing framework
+  * Karma - test runner
+  * Chai - assertion library
+  * dotenv - environment variables
 
-To get started complete the following steps:
+The application architecture is as follows:
 
-1. Execute the following command to install dependencies:
+```
+Root Directory
+-- server
+    | -- server.js
+    | -- middleware
+          | -- dev-middleware.js  #middleware for react HMR
+          | -- api
+                | -- routes.js #routes
+                | -- counter
+                     | -- counterRoutes.js #endpoints
+                      | -- counterController.js #endpoint logic
+-- src
+    | -- main.jsx #entry point of application
+    | -- components #reusable react components
+    |     | -- displayNumber #component name
+    |           | -- displayNumber.jsx #react component
+    |           | -- displayNumber.scss #component styling
+    | -- containers #larger stateful components
+    |     | -- App #main App component
+    |           | -- App.jsx #main component
+    |           | -- app.scss #main component styling
+    | -- layouts # encapsulating components dictating over all style
+    |     | -- CoreLayout.jsx # core layout
+    | -- redux #everything redux
+          | -- configureStore.jsx #redux middleware goes here
+          | -- rootReducer.jsx #combine all reducers here
+          | -- modules
+                | -- counter.jsx #redux actions, constants, and reducer all in one file
+          | -- states
+                | -- counterState.jsx #define initial state for reducer
+-- test
+    | -- counterView.spec.jsx #tests
 
+```
+
+To get started:
+1. Make sure you have Node installed. This boilerplate has been shown to work with Node 6.2.1+
+2. Install the dependecies by executing the following command:
   ```shell
-  npm install
+    npm install
   ```
-
-2. Rename the .env.template file to .env and fill in the necessary info that is empty. You may need to obtain your own api keys for cloudinary.
-3. Start a PostgreSQL server at port 5432 (this is the default port for PostgreSQL)
-4. Create a database in PostgreSQL named pint
-5. Navigate to '/server/database' in the project folder and execute the following command:
-
+3. Rename .env.template to .env
+4. To run the application in development mode execute the following command:
   ```shell
-  psql pint -f tables.sql
+    npm run dev
   ```
-
->NOTE: This will file will create the necessary tables required for this app to work. You can also use this command to clear out any and all data you may have in those tables.
-
-6. To start the app in development mode execute the following command and browse to http://localhost:3000 to view the app:
-
+  >Note: This will run the application in development mode and hot module replacement will be enabled.
+5. To run the tests execute the following command:
   ```shell
-  npm run dev
+    #the following command will execute the tests once:
+    npm test
+
+    #the following command will re-run the tests on every file save. Useful for writing tests:
+    npm run test:dev
   ```
-
-7. To minify, uglify, lint and build the app for deployment run the following command:
-
+6. To build a minified, uglified, production verison of the application bundle after running all of the tests execute the following command:
   ```shell
-  npm start
+    npm start
   ```
+  >Note: this command will not output a bundle if you have any errors in your code, Even linting errors!!
+
+If for some reason you are having trouble getting anything to work feel free reach out.
