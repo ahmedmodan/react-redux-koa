@@ -66,11 +66,13 @@ Root Directory
 ```
 
 To get started:
-1. Make sure you have Node installed. This boilerplate has been shown to work with Node 6.2.1+
+1. Make sure you have Node installed.
 2. Install the dependecies by executing the following command:
+
   ```shell
     npm install
   ```
+
 3. Rename .env.template to .env
 4. To run the application in development mode execute the following command:
 
