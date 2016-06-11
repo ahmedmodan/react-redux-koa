@@ -1,13 +1,13 @@
 # A React - Redux - Koa Boilerplate
 
 This is a production ready boilerplate for projects in React and Redux.
-The backend is in Koa but can easily be swtiched out to Express if desired.
+## This is branch uses Express instead of Koa as the Node framework.
 
 The list of Technologies in use are listed below:
   * React - views
   * Redux - State management
   * ImmutableJS - immutability management
-  * koa - Node framework
+  * Express - Node framework
   * Materialize - CSS Framework
   * SASS - CSS pre-processor
   * Webpack - module bundler
@@ -35,7 +35,6 @@ Root Directory
 -- server
     | -- server.js
     | -- middleware
-          | -- dev-middleware.js  #middleware for react HMR
           | -- api
                 | -- routes.js #routes
                 | -- counter
@@ -57,11 +56,11 @@ Root Directory
           | -- configureStore.jsx #redux middleware goes here
           | -- rootReducer.jsx #combine all reducers here
           | -- modules
-                | -- counter.jsx #redux actions, constants, and reducer all in one file
+                | -- counterReducer.jsx #redux actions, constants, and reducer all in one file
           | -- states
                 | -- counterState.jsx #define initial state for reducer
 -- test
-    | -- counterView.spec.jsx #tests
+    | -- Counter.spec.jsx #tests
 
 ```
 

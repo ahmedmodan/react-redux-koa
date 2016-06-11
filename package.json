@@ -35,15 +35,14 @@
   },
   "homepage": "https://github.com/ahmedmodan/react-redux-koa#readme",
   "dependencies": {
+    "connect-history-api-fallback": "^1.2.0",
     "es6-promise": "^3.1.2",
     "eslint": "^2.12.0",
+    "express": "^4.13.4",
+    "express-router": "0.0.1",
     "history": "^3.0.0",
     "immutable": "^3.8.1",
     "jquery": "^3.0.0",
-    "koa": "^1.2.0",
-    "koa-connect-history-api-fallback": "^0.3.0",
-    "koa-router": "^5.4.0",
-    "koa-static": "^2.0.0",
     "materialize-css": "^0.97.6",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
@@ -106,6 +105,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
     "yargs": "^4.7.1"
   }
