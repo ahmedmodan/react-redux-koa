@@ -30,6 +30,10 @@ const webpackConfiguration = {
         loaders: ['style', 'css', 'postcss', 'sass']
       },
       {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
         test: /\.(woff2?|svg)$/,
         loader: 'url?limit=10000'
       },
