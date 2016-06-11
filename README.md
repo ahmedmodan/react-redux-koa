@@ -79,9 +79,11 @@ To get started:
     npm run test:dev
   ```
 6. To build a minified, uglified, production verison of the application bundle after running all of the tests execute the following command:
+
   ```shell
     npm start
   ```
+
   >Note: this command will not output a bundle if you have any errors in your code, Even linting errors!!
 
 If for some reason you are having trouble getting anything to work feel free reach out.
