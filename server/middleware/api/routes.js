@@ -1,6 +1,7 @@
-const router = require('koa-router')();
 const counterRoutes = require('./counter/counterRoutes');
 
-router.use('/asyncAdd', counterRoutes.routes());
-
-module.exports = router;
+module.exports = function (app, express) {
+  const counterRouter = express.Router();
+  app.use('/asyncAdd', counterRouter);
+  counterRoutes(counterRouter);
+};

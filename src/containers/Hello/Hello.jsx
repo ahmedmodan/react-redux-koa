@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 /* eslint-disable react/prefer-stateless-function */
-export default class HelloRoutes extends React.Component {
+export default class Hello extends React.Component {
   render() {
     return (
       <div>
