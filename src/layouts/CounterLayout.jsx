@@ -2,8 +2,10 @@ import React, { PropTypes } from 'react';
 
 function CounterLayout({ children }) {
   return (
-    <div>
-      <h2>A Temporary Counter</h2>
+    <div className="row">
+      <div className="col offset-m3">
+        <h2>A Temporary Counter</h2>
+      </div>
       {children}
     </div>
   );
