@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { actions as counterActions } from '../../redux/modules/counter';
+import { actions as counterActions } from '../../redux/modules/counterReducer';
 import DisplayNumber from '../../components/displayNumber/displayNumber';
 
 const mapStateToProps = (state) => ({
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 // this is a smart component. it contains a dumb component (DisplayNumber) to help display logic
-export class CounterView extends React.Component {
+export class Counter extends React.Component {
   static propTypes = {
     counter: PropTypes.object.isRequired,
     increment: PropTypes.func.isRequired,
@@ -48,4 +48,4 @@ export class CounterView extends React.Component {
     );
   }
 }
-export default connect(mapStateToProps, counterActions)(CounterView);
+export default connect(mapStateToProps, counterActions)(Counter);

@@ -1,7 +1,7 @@
 # A React - Redux - Koa Boilerplate
 
 This is a production ready boilerplate for projects in React and Redux.
-The backend is in Koa but can easily be swtiched out to Express if desired.
+The backend is in Koa but there is a branch available with Express instead.
 
 The list of Technologies in use are listed below:
   * React - views
@@ -17,7 +17,7 @@ The list of Technologies in use are listed below:
   * Karma - test runner
   * Chai - assertion library
   * dotenv - environment variables
-
+  * corss-env - multi-environment variables
 
 ## Requirements
 
@@ -57,11 +57,11 @@ Root Directory
           | -- configureStore.jsx #redux middleware goes here
           | -- rootReducer.jsx #combine all reducers here
           | -- modules
-                | -- counter.jsx #redux actions, constants, and reducer all in one file
+                | -- counterReducer.jsx #redux actions, constants, and reducer all in one file
           | -- states
                 | -- counterState.jsx #define initial state for reducer
 -- test
-    | -- counterView.spec.jsx #tests
+    | -- Counter.spec.jsx #tests
 
 ```
 

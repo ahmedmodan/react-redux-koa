@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-export function LandingView() {
+export function Landing() {
   return (
     <div>
       <h1>This is the landing Page</h1>
@@ -13,4 +13,4 @@ export function LandingView() {
   );
 }
 
-export default LandingView;
+export default Landing;

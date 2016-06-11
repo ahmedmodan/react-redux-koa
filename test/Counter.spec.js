@@ -1,15 +1,15 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import { CounterView } from '../src/containers/Counter/counterView';
+import { Counter } from '../src/containers/Counter/Counter';
 import counterState from './../src/redux/states/counterState';
-import { actions } from './../src/redux/modules/counter';
+import { actions } from './../src/redux/modules/counterReducer';
 import DisplayNumber from './../src/components/displayNumber/displayNumber';
 
 
 describe('(Container) CounterView', () => {
   it('contains the Displayumber ', () => {
-    const wrapper = shallow(<CounterView counter={counterState} { ...actions } />);
+    const wrapper = shallow(<Counter counter={counterState} { ...actions } />);
     expect(wrapper.contains(<DisplayNumber numToDisplay={counterState} />)).to.equal(true);
   });
 });
