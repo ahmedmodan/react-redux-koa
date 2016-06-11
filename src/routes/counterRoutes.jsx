@@ -7,8 +7,8 @@ import CounterView from './../containers/Counter/counterView';
 import CounterLayout from './../layouts/CounterLayout';
 
 export default (
-  <Route path="counter" component= { CounterLayout } >
-    <IndexRoute component={ CounterView } />
-    <Route path="hello" component={ HelloRoutes } />
+  <Route path="counter" component={CounterLayout} >
+    <IndexRoute component={CounterView} />
+    <Route path="hello" component={HelloRoutes} />
   </Route>
 );

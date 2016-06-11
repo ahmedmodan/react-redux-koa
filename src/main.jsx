@@ -11,7 +11,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import routes from './routes/routes';
 import configureStore from './redux/configureStore';
 
-const store = configureStore(window.__INITIAL_STATE__);
+
+const store = configureStore(window.__INITIAL_STATE__); // eslint-disable-line no-underscore-dangle
 
 const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: (state) => state.router

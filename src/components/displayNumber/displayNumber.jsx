@@ -7,7 +7,7 @@ require('./displaynumber.scss');
 export function DisplayNumber({ numToDisplay }) {
   return (
     <div>
-      <h3 className="numToDisplay">{ numToDisplay.get('counter') }</h3>
+      <h3 className="numToDisplay">{numToDisplay.get('counter')}</h3>
     </div>
   );
 }

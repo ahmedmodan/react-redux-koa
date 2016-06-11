@@ -12,7 +12,7 @@ export default class App extends React.Component {
   get router() {
     return (
       <Router history={this.props.history}>
-        { this.props.routes }
+        {this.props.routes}
       </Router>
     );
   }
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     return (
       <Provider store={this.props.store}>
         <div>
-          { this.router }
+          {this.router}
         </div>
       </Provider>
     );

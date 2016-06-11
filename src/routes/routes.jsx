@@ -9,7 +9,7 @@ import counterRoutes from './counterRoutes';
 export default (
   <Route path="/" component={CoreLayout}>
     <IndexRoute component={LandingView} />
-    { counterRoutes }
+    {counterRoutes}
     <Redirect from="*" to="/" />
   </Route>
 );
