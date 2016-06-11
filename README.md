@@ -63,10 +63,13 @@ To get started:
   ```
 3. Rename .env.template to .env
 4. To run the application in development mode execute the following command:
+
   ```shell
     npm run dev
   ```
+
   >Note: This will run the application in development mode and hot module replacement will be enabled.
+
 5. To run the tests execute the following command:
   ```shell
     #the following command will execute the tests once:
