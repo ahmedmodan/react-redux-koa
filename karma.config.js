@@ -68,10 +68,6 @@ module.exports = function (config) {
           {
             test: /\.scss$/,
             loaders: ['style', 'css', 'postcss', 'sass']
-          },
-          {
-            test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/,
-            loader: 'imports?jQuery=jquery'
           }
         ],
       },
@@ -93,11 +89,7 @@ module.exports = function (config) {
       'karma-webpack',
       'karma-phantomjs-launcher',
       'karma-spec-reporter',
-      'karma-sourcemap-loader',
-      new webpack.ProvidePlugin({
-        'window.Tether': 'tether',
-        $: 'jquery'
-      })
+      'karma-sourcemap-loader'
     ]
   });
 };
