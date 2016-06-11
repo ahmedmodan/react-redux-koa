@@ -18,7 +18,17 @@ The list of Technologies in use are listed below:
   * Chai - assertion library
   * dotenv - environment variables
 
-The application architecture is as follows:
+
+## Requirements
+
+---
+
+* Node > 5.7
+
+> Note. If using Node 6 make sure it is at least 6.2.1 or above.
+
+
+##App Architecture
 
 ```
 Root Directory
