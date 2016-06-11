@@ -17,7 +17,7 @@ The list of Technologies in use are listed below:
   * Karma - test runner
   * Chai - assertion library
   * dotenv - environment variables
-  * corss-env - multi-environment variables
+  * cross-env - multi-environment environment variables
 
 ## Requirements
 
