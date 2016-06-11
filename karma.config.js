@@ -1,6 +1,5 @@
 const argv = require('yargs').argv;
 const path = require('path');
-const webpack = require('webpack');
 
 
 module.exports = function (config) {
@@ -26,7 +25,7 @@ module.exports = function (config) {
     preprocessors: {
       // these files we want to be precompiled with webpack
       // also run tests throug sourcemap for easier debugging
-      ['./test/**/*.js']: ['webpack', 'sourcemap']
+      ['./test/**/*']: ['webpack', 'sourcemap'] // eslint-disable-line no-useless-computed-key
     },
     // A lot of people will reuse the same webpack config that they use
     // in development for karma but remove any production plugins like UglifyJS etc.
