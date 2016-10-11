@@ -4,4 +4,4 @@ function* getNum() {
 
 module.exports = {
   getNum
-}
+};

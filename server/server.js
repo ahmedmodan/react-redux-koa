@@ -1,8 +1,8 @@
 
 const koa = require('koa');
 const serve = require('koa-static');
-const router = require('./middleware/api/routes');
-const historyApiFallback = require('koa-connect-history-api-fallback');
+const router = require('./api/routes');
+const historyApiFallback = require('./middleware/historyFallback');
 
 const app = koa();
 
@@ -11,9 +11,9 @@ if (process.env.NODE_ENV !== 'production') {
   const webpack = require('webpack');
   const webpackConfig = require('../webpack.config');
   const compiler = webpack(webpackConfig);
-  const devMiddlware = require('./middleware/dev-middleware');
-  app.use(devMiddlware.webpackDevMiddleware(webpackConfig, compiler));
-  app.use(devMiddlware.webpackHotMiddleware(compiler));
+  const devMiddleware = require('./middleware/dev-middleware');
+  app.use(devMiddleware.webpackDevMiddleware(webpackConfig, compiler));
+  app.use(devMiddleware.webpackHotMiddleware(compiler));
 }
 
 app.use(function *(next) {
