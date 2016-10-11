@@ -53,7 +53,7 @@ module.exports = function (config) {
         // run babel loader for our tests
         loaders: [
           {
-            test: /\.jsx?$/,
+            test: /\.js$|\.jsx$/,
             exclude: /node_modules/,
             loader: 'babel',
             query: {
@@ -61,12 +61,8 @@ module.exports = function (config) {
             }
           },
           {
-            test: /\.css$/,
-            loaders: ['style', 'css', 'postcss']
-          },
-          {
-            test: /\.scss$/,
-            loaders: ['style', 'css', 'postcss', 'sass']
+            test: /\.styl$/,
+            loaders: ['style', 'css', 'postcss', 'stylus']
           }
         ],
       },
