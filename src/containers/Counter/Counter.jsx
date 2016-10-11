@@ -39,32 +39,12 @@ export class Counter extends React.Component {
   render() {
     return (
       <div>
-        <div className="row">
-          <div className="col offset-s6">
-            <DisplayNumber numToDisplay={this.props.counter} />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col offset-s3 offset-m4">
-            <div className="col s12 m4">
-              <button className="btn" onClick={this.handleDecrement}>decrement</button>
-            </div>
-            <div className="col s12 m4">
-              <button className="btn" onClick={this.handleIncrement}>increment</button>
-            </div>
-            <div className="col s12 m4">
-              <button className="btn" onClick={this.handleAddAsync}>Async Add</button>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col offset-s2 offset-m3 s12 m4">
-            <Link className="btn" to="/counter/hello">Let's do some routing</Link>
-          </div>
-          <div className="col offset-s2 s12 m4">
-            <Link className="btn" to="/">Back to the Homepage</Link>
-          </div>
-        </div>
+        <DisplayNumber numToDisplay={this.props.counter} />
+        <button onClick={this.handleDecrement}>decrement</button>
+        <button onClick={this.handleIncrement}>increment</button>
+        <button onClick={this.handleAddAsync}>Async Add</button>
+        <Link to="/counter/hello">Let's do some routing</Link>
+        <Link to="/">Back to the Homepage</Link>
       </div>
     );
   }
