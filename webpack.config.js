@@ -49,7 +49,7 @@ const webpackConfiguration = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.ProvidePlugin({
-      __dev__: JSON.stringify(process.env.NODE_ENV) !== "'production'"
+      fetch: 'isomorphic-fetch'
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'assets', 'index.html')
@@ -59,7 +59,13 @@ const webpackConfiguration = {
 
 if (process.env.NODE_ENV === 'development') {
   webpackConfiguration.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
+
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development')
+      }
+    })
   );
   webpackConfiguration.entry.push('webpack-hot-middleware/client');
   webpackConfiguration.module.loaders.push({
